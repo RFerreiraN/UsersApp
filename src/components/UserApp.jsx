@@ -6,14 +6,14 @@ export const UserApp = () => {
   const [endPoint, setEndPoint] = useState('users')
   
   const handleFetch = () => {
-      setEndPoint('comments')
+      setEndPoint(prev => prev === 'users' ? 'comments' : 'users')
   }
 
   return (
     <>
       <h1>Users App</h1>
-      <UserList endPoint={ endPoint }/>
       <button onClick={ handleFetch }>Cambiar</button>
+      <UserList endPoint={ endPoint }/>
     </>
   )
 }
