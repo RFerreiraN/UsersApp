@@ -9,7 +9,9 @@ export const UserList = ( endPoint ) => {
         { users.map( user => (
           
           <li key={user.id}>
-            { endPoint == 'users' ? user.name : user.email }
+            { isLoading 
+            ? <p>Cargando...</p> 
+              : endPoint == 'users' ? user.name : user.email }
           </li>
         ))}
       </ul>

@@ -4,7 +4,6 @@ import { UserList } from './UserList';
 export const UserApp = () => {
 
   const [endPoint, setEndPoint] = useState('users')
-  
   const handleFetch = () => {
       setEndPoint(prev => prev === 'users' ? 'comments' : 'users')
   }
