@@ -1,4 +1,4 @@
- import { useState, useEffect} from "react";
+import { useState, useEffect} from "react";
 
 export const useFetchUsers = ( {endPoint} ) => {
 
@@ -10,6 +10,7 @@ export const useFetchUsers = ( {endPoint} ) => {
         const response = await fetch(`https://jsonplaceholder.typicode.com/${endPoint}`);
         const data = await response.json()
         setUsers(data)
+        console.log(data)
         setIsLoading(false)
       } catch (error) {
         console.error( error )

@@ -1,8 +1,8 @@
 
 import { useFetchUsers } from "../Hooks/useFetchUsers";
 
-export const UserList = ( endPoint ) => {
-  const { users, isLoading } = useFetchUsers( endPoint )
+export const UserList = ( {endPoint} ) => {
+  const { users, isLoading } = useFetchUsers( {endPoint} )
   return (
     <>
       <ul>
