@@ -18,3 +18,6 @@ export const UserList = ( {endPoint} ) => {
     </>
   )
 }
+
+
+//realizar mañana toda la practica de nuevo, incluyendo los componentes secundarios y el customhook
